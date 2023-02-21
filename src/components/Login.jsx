@@ -7,9 +7,11 @@ import five from "../assets/5.png";
 import six from "../assets/6.png";
 import bgLogo from "../assets/bg-logo.png";
 import { useUserData } from "../context/Context";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { setUserMail, handleLogin } = useUserData();
+  const navigate = useNavigate();
   return (
     <div>
       <div className="h-screen w-screen bg-gradient-to-br from-firstColor to-secondColor text-white overflow-hidden relative flex">
@@ -73,7 +75,7 @@ const Login = () => {
               {/* Submit button and bottom texts */}
               <div className="flex flex-col items-center ">
                 <button
-                  onClick={handleLogin}
+                  onClick={() => handleLogin({ navigate })}
                   className="btn bg-[#516BC7] text-white text-xs w-full border-none"
                 >
                   Log In

@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { Navigate } from "react-router";
 import toast from "react-hot-toast";
 
 const UserContext = createContext();
@@ -9,12 +8,12 @@ export const UserProvider = ({ children }) => {
   const regex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  const handleLogin = () => {
+  const handleLogin = ({ navigate }) => {
     if (userMail.match(regex)) {
       toast.success("Login Succesfull");
+      navigate("/userpanel");
     } else {
       toast.error("Invalid Email");
-      return <Navigate to="/userpanel" />;
     }
   };
 

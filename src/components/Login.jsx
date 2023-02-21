@@ -6,8 +6,10 @@ import four from "../assets/4.png";
 import five from "../assets/5.png";
 import six from "../assets/6.png";
 import bgLogo from "../assets/bg-logo.png";
+import { useUserData } from "../context/Context";
 
 const Login = () => {
+  const { setUserMail, handleLogin } = useUserData();
   return (
     <div>
       <div className="h-screen w-screen bg-gradient-to-br from-firstColor to-secondColor text-white overflow-hidden relative flex">
@@ -53,6 +55,7 @@ const Login = () => {
               <input
                 type="text"
                 placeholder="Enter your mail adress"
+                onChange={(e) => setUserMail(e.target.value)}
                 className="p-3 text-xs mt-2 rounded-md w-full bg-white text-gray-800"
               />
 
@@ -69,7 +72,10 @@ const Login = () => {
 
               {/* Submit button and bottom texts */}
               <div className="flex flex-col items-center ">
-                <button className="btn bg-[#516BC7] text-white text-xs w-full border-none">
+                <button
+                  onClick={handleLogin}
+                  className="btn bg-[#516BC7] text-white text-xs w-full border-none"
+                >
                   Log In
                 </button>
 
@@ -77,7 +83,7 @@ const Login = () => {
                   Forgot Your Password?
                 </p>
                 <p className="text-[#4C5F82] text-xs">
-                  Don't have an account?{" "}
+                  Don't have an account?
                   <strong className="cursor-pointer hover:underline">
                     Sign Up
                   </strong>

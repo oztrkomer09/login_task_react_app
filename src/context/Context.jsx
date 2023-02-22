@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 
 const UserContext = createContext();

@@ -8,7 +8,7 @@ import { ImUserPlus } from "react-icons/im";
 function Sidebar({ navigate }) {
   const { userMail, handleLogout } = useUserData();
   return (
-    <div className="bg-white w-[284px] pt-44 md:pt-32 shrink-0">
+    <div className="bg-white md:w-[284px] w-full px-4 md:pt-32 shrink-0 absolute md:static flex justify-between md:flex-col bottom-0 md:justify-start">
       {/* Sidebar Header */}
       <div className="flex justify-center gap-x-4 items-center">
         <img src={profile} alt="profile" />
@@ -19,13 +19,13 @@ function Sidebar({ navigate }) {
         <FiPower
           onClick={() => handleLogout({ navigate })}
           size={22}
-          className="text-blue-700 cursor-pointer"
+          className="text-blue-700 cursor-pointer text-xl"
         />
       </div>
       {/* Sidebar Body */}
 
       <div>
-        <div className="mt-16">
+        <div className="mt-2 md:mt-16">
           <div className="flex gap-x-12 justify-around items-center text-sm">
             <p>Navigation</p>
             <MdArrowBackIos className="rotate-90 text-blue-700 mt-2 cursor-pointer" />

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./components/Login";
-import UserPanel from "./components/UserPanel";
+import Login from "./components/layouts/Login";
+import UserPanel from "./components/layouts/UserPanel";
 import { UserProvider } from "./context/Context";
 import { Toaster } from "react-hot-toast";
 

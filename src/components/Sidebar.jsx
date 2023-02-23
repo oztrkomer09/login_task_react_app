@@ -19,30 +19,37 @@ function Sidebar({ navigate }) {
         <FiPower
           onClick={() => handleLogout({ navigate })}
           size={22}
-          className="text-blue-700 cursor-pointer text-xl"
+          className="text-blue-700 cursor-pointer text-xl shrink-0"
         />
       </div>
       {/* Sidebar Body */}
 
       <div>
         <div className="mt-2 md:mt-16">
-          <div className="flex gap-x-12 justify-around items-center text-sm">
+          <div className="flex gap-x-12 justify-around items-center text-xs md:text-sm">
             <p>Navigation</p>
             <MdArrowBackIos className="rotate-90 text-blue-700 mt-2 cursor-pointer" />
           </div>
           <div className="flex gap-x-4 mx-10 mt-4 items-center cursor-pointer">
             <RiApps2Line size={23} className="text-blue-700" />
-            <p className="text-sm text-black font-semibold">Homepage</p>
+            <p className="text-xs md:text-sm text-black font-semibold">
+              Homepage
+            </p>
           </div>
         </div>
         <div className="mt-4">
-          <div className="flex gap-x-20 justify-around items-center text-sm ">
+          <div className="flex gap-x-20 justify-around items-center text-xs md:text-sm ">
             <p>APPS</p>
             <MdArrowBackIos className="rotate-90 text-blue-700 mt-2 cursor-pointer" />
           </div>
-          <div className="flex gap-x-4 mx-7 mt-4 items-center bg-blue-100 p-3 rounded-3xl cursor-pointer">
+          <div
+            className="flex gap-x-4 mx-7 mt-4 items-center bg-blue-100 p-3 rounded-3xl cursor-pointer hover:bg-blue-400 transition-all"
+            onClick={() => navigate("/userpanel/dashboardpanel")}
+          >
             <ImUserPlus size={23} className="text-blue-700" />
-            <p className="text-sm text-black font-semibold">User Operations</p>
+            <p className="text-xs md:text-sm text-black font-semibold">
+              User Operations
+            </p>
           </div>
         </div>
       </div>

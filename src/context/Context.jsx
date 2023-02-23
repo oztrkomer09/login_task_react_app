@@ -5,7 +5,6 @@ import {
   collection,
   query,
   onSnapshot,
-  orderBy,
   doc,
   deleteDoc,
 } from "firebase/firestore";
@@ -21,10 +20,13 @@ export const UserProvider = ({ children }) => {
 
   //Read users data from firebase constants
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const [editUser, setEditUser] = useState(null);
 
   const fetchUsers = async () => {
-    const qry = query(collection(db, "users"));
-    onSnapshot(qry, (snapshot) => {
+    const qry = await query(collection(db, "users"));
+    await onSnapshot(qry, (snapshot) => {
       setUsers(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -32,6 +34,9 @@ export const UserProvider = ({ children }) => {
         }))
       );
     });
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -61,10 +66,18 @@ export const UserProvider = ({ children }) => {
 
   //Delete user function
   const handleDelete = (id) => {
-    deleteDoc(doc(db, "users", id));
-    toast("User Deleted!", {
-      icon: "🗑️",
-    });
+    if (window.confirm("Are you sure you want to delete that user?")) {
+      deleteDoc(doc(db, "users", id));
+      toast("User Deleted!", {
+        icon: "🗑️",
+      });
+    }
+  };
+
+  //Edit user function
+  const handleEdit = (user, { navigate }) => {
+    setEditUser(user);
+    navigate("/userpanel/editform");
   };
 
   const data = {
@@ -74,6 +87,10 @@ export const UserProvider = ({ children }) => {
     handleLogout,
     users,
     handleDelete,
+    loading,
+    handleEdit,
+    editUser,
+    setEditUser,
   };
 
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>;

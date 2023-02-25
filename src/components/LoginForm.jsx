@@ -20,7 +20,7 @@ function LoginForm() {
       <img src={loginHead} className="z-10 w-2/3" alt="loginHead" />
 
       {/* Login Form Items */}
-      <div className="bg-gradient-to-b from-white to-[rgba(255,255,255,0.2)] w-full h-full  rounded-xl flex flex-col px-10 border-white border-[1px] font-inter">
+      <div className="bg-gradient-to-b from-white to-[rgba(255,255,255,0.2)] w-full h-full  rounded-xl flex flex-col px-10 pb-4 border-white border-[1px] font-inter">
         <h1 className="text-[#516BC7] text-2xl font-bold mt-8 mx-auto">
           SIGN IN
         </h1>
@@ -53,8 +53,10 @@ function LoginForm() {
               Log In
             </button>
 
-            <p className="text-[#4C5F82] text-xs my-6">Forgot Your Password?</p>
-            <p className="text-[#4C5F82] text-xs">
+            <p className="text-[#4C5F82] text-xs my-6 text-center">
+              Forgot Your Password?
+            </p>
+            <p className="text-[#4C5F82] text-xs text-center">
               Don't have an account?
               <strong className="cursor-pointer hover:underline">
                 Sign Up

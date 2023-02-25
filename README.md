@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<a href="https://login-task-react-app.vercel.app/" target="_blank">Live Project</a>
+
 ## Available Scripts
 
 In the project directory, you can run:

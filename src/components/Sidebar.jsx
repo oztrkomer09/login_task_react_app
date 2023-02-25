@@ -30,7 +30,10 @@ function Sidebar({ navigate }) {
             <p>Navigation</p>
             <MdArrowBackIos className="rotate-90 text-blue-700 mt-2 cursor-pointer" />
           </div>
-          <div className="flex gap-x-4 mx-10 mt-4 items-center cursor-pointer">
+          <div
+            className="flex gap-x-4 mx-7 p-3 rounded-3xl mt-4 items-center cursor-pointer hover:bg-blue-400 transition-all"
+            onClick={() => navigate("/userpanel/home")}
+          >
             <RiApps2Line size={23} className="text-blue-700" />
             <p className="text-xs md:text-sm text-black font-semibold">
               Homepage
@@ -43,7 +46,7 @@ function Sidebar({ navigate }) {
             <MdArrowBackIos className="rotate-90 text-blue-700 mt-2 cursor-pointer" />
           </div>
           <div
-            className="flex gap-x-4 mx-7 mt-4 items-center bg-blue-100 p-3 rounded-3xl cursor-pointer hover:bg-blue-400 transition-all"
+            className="flex gap-x-4 mx-7 mt-4 items-center p-3 rounded-3xl cursor-pointer hover:bg-blue-400 transition-all"
             onClick={() => navigate("/userpanel/dashboardpanel")}
           >
             <ImUserPlus size={23} className="text-blue-700" />

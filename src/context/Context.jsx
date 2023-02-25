@@ -1,12 +1,13 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import toast from "react-hot-toast";
-// import { getDocs, collection, } from "firebase/firestore";
+
 import {
   collection,
   query,
   onSnapshot,
   doc,
   deleteDoc,
+  updateDoc,
 } from "firebase/firestore";
 import { db } from "../firebase";
 
@@ -74,10 +75,25 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  //Edit user function
+  //navigate to EditForm function
   const handleEdit = (user, { navigate }) => {
     setEditUser(user);
     navigate("/userpanel/editform");
+  };
+
+  //Update user data function
+  const handleUpdate = async (id, user) => {
+    const userRef = doc(db, "users", id);
+    await updateDoc(userRef, {
+      name: user.editUser.name || null,
+      email: user.editUser.email || null,
+      phone: user.editUser.phone || null,
+      date: user.editUser.date || null,
+      status: user.editUser.status || null,
+    });
+    toast(`${user.editUser.name} is updated`, {
+      icon: "👍🏻",
+    });
   };
 
   const data = {
@@ -91,6 +107,7 @@ export const UserProvider = ({ children }) => {
     handleEdit,
     editUser,
     setEditUser,
+    handleUpdate,
   };
 
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>;

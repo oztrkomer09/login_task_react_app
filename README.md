@@ -23,35 +23,42 @@ Bu projede kullanılan teknolojiler:
 <img style="height: 300px" src="public/screenshots/1-login_page_mobile.png">
 </div>
 
-<p style="margin-top: 10px">Bu bir login sayfasıdır.</p>
+<p style="margin-top: 10px">Giriş sayfasında, basit bir şekilde e-mail adresinizi yazarak, uygulamaya giriş yapabilirsiniz. E-mailinizin formata uygun olmaması durumunda, ekranın sağ üst kısmında react-hot-toast hata mesajı verir. Geçerli e-mail girmeniz durumunda, yine sağ üstte "giriş başarılı" uyarısı ile ilk sayfaya yönlendirilirsiniz. </p>
 </div>
 
 <h2>2-İlk Sayfa</h2>
 <div style="margin-bottom: 10px; border-bottom:1px solid white">
 <img style="width: 516px" src="public/screenshots/2-main_page_computer.png">
 <img style="height: 300px" src="public/screenshots/2-main_page_mobile.png">
-<p>Asdaasdasd</p>
+<p>İlk sayfa kısmında, panelimiz boş bulunuyor. Giriş kısmında yazdığınız mail adresi burada gözükür. Cihazınıza göre solda ya da ekranın altında bulunan menüden, ana sayfaya gidebilir veya kullanıcı paneline erişebilirsiniz. "Güç kapatma" tuşuna tıklayarak ise, "çıkış başarılı" uyarısını alıp, giriş sayfasına geri dönebilirsiniz.  </p>
 </div>
 
 <h2>3-Ana Sayfa</h2>
 <div style="margin-bottom: 10px; border-bottom:1px solid white">
 <img style="width: 516px" src="public/screenshots/3-home_page_computer.png">
 <img style="height: 300px" src="public/screenshots/3-home_page_mobile.png">
-<p>Asdaasdasd</p>
+<p>Ana sayfamızda istenildiği üzere sadece ana sayfa olduğunu belirten bir panel bulunuyor. </p>
 </div>
 
 <h2>4-Kullanıcı Paneli</h2>
 <div style="margin-bottom: 10px; border-bottom:1px solid white">
 <img style="width: 516px" src="public/screenshots/4-dashboard_panel_computer.png">
 <img style="height: 300px" src="public/screenshots/4-dashboard_panel_mobile.png">
-<p>Asdaasdasd</p>
+<p>Kullanıcı işlemleri sekmesinde ise, kullanıcı panelini görüntüleyebilir. Kayıtlı kullanıcıların "İsim-Soyisim, e-mail, tel. no, durum bilgisi" bilgilerine ulaşabilirsiniz. İşlemler kısmından "çöp kutusu" simgesi ile kullanıcıyı silebilir veya "düzenleme" simgesi ile kullanıcıyı düzenleyebileceğiniz "Kullanıcı Düzenleme Paneline" yönlenebilirsiniz.</p>
 </div>
 
 <h2>5-Kullanıcı Düzenleme Paneli</h2>
 <div style="margin-bottom: 10px; border-bottom:1px solid white">
 <img style="width: 516px" src="public/screenshots/5-edit_form_computer.png">
 <img style="height: 300px" src="public/screenshots/5-edit_form_mobile.png">
-<p>Asdaasdasd</p>
+<p>Kullanıcı düzenleme panelinden, seçtiğiniz kullanıcının bilgilerini güncelleyebilir, veya kullanıcıyı silebilirsiniz. </p>
+</div>
+
+<h2>6-Sayfa Bulunamadı Uyarısı</h2>
+<div style="margin-bottom: 10px; border-bottom:1px solid white">
+<img style="width: 516px" src="public/screenshots/6-notfound_page_computer.png">
+<img style="height: 300px" src="public/screenshots/6-notfound_page_mobile.png">
+<p>Tarayıcınızın adres kısmından, eksik veya hatalı bir adres girmeniz durumunda, "Sayfa Bulunamadı" uyarısına yönlendirilirsiniz. Buradan tekrar giriş sayfasına dönebilirsiniz. </p>
 </div>
 
 ## Available Scripts

@@ -5,7 +5,7 @@ import { BsTrash } from "react-icons/bs";
 import { useOutletContext, Navigate } from "react-router-dom";
 
 function EditForm() {
-  const { editUser, setEditUser, handleUpdate } = useUserData();
+  const { editUser, setEditUser, handleUpdate, handleDelete } = useUserData();
   const { navigate } = useOutletContext();
 
   return editUser ? (
@@ -108,7 +108,13 @@ function EditForm() {
 
         {/* Form buttons */}
         <div className="flex gap-x-2 mx-auto">
-          <button className=" font-thin text bg-red-100 hover:bg-red-600 transition-all px-5 py-3 text-center rounded-full text-red-600 hover:text-white flex items-center gap-x-1 text-sm">
+          <button
+            onClick={() => {
+              navigate(-1);
+              handleDelete(editUser.id);
+            }}
+            className=" font-thin text bg-red-100 hover:bg-red-600 transition-all px-5 py-3 text-center rounded-full text-red-600 hover:text-white flex items-center gap-x-1 text-sm"
+          >
             <BsTrash size={18} /> Delete Account
           </button>
           <button

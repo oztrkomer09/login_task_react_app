@@ -4,6 +4,56 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <a href="https://login-task-react-app.vercel.app/" target="_blank">Live Project</a>
 
+Bu projede kullanılan teknolojiler:
+
+<ul>
+<li>react: "18.2.0"</li>
+<li>tailwindcss: "3.2.7"</li>
+<li>firebase: "9.17.1"</li>
+<li>react-router-dom: "^.8.1"</li>
+<li>daisyui: "2.50.2"</li>
+<li>react-hot-toast: "2.4.0"</li>
+</ul>
+
+<h2>1-Login Sayfası</h2>
+<div style="margin-bottom: 10px; border-bottom:1px solid white;">
+
+<div style="display:flex; ">
+<img style="width: 516px" src="public/screenshots/1-login_page_computer.png">
+<img style="height: 300px" src="public/screenshots/1-login_page_mobile.png">
+</div>
+
+<p>Asdaasdasd</p>
+</div>
+
+<h2>2-İlk Sayfa</h2>
+<div style="margin-bottom: 10px; border-bottom:1px solid white">
+<img style="width: 516px" src="public/screenshots/2-main_page_computer.png">
+<img style="height: 300px" src="public/screenshots/2-main_page_mobile.png">
+<p>Asdaasdasd</p>
+</div>
+
+<h2>3-Ana Sayfa</h2>
+<div style="margin-bottom: 10px; border-bottom:1px solid white">
+<img style="width: 516px" src="public/screenshots/3-home_page_computer.png">
+<img style="height: 300px" src="public/screenshots/3-home_page_mobile.png">
+<p>Asdaasdasd</p>
+</div>
+
+<h2>4-Kullanıcı Paneli</h2>
+<div style="margin-bottom: 10px; border-bottom:1px solid white">
+<img style="width: 516px" src="public/screenshots/4-dashboard_panel_computer.png">
+<img style="height: 300px" src="public/screenshots/4-dashboard_panel_mobile.png">
+<p>Asdaasdasd</p>
+</div>
+
+<h2>5-Kullanıcı Düzenleme Paneli</h2>
+<div style="margin-bottom: 10px; border-bottom:1px solid white">
+<img style="width: 516px" src="public/screenshots/5-edit_form_computer.png">
+<img style="height: 300px" src="public/screenshots/5-edit_form_mobile.png">
+<p>Asdaasdasd</p>
+</div>
+
 ## Available Scripts
 
 In the project directory, you can run:

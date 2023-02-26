@@ -10,7 +10,7 @@ Bu projede kullanılan teknolojiler:
 <li>react: "18.2.0"</li>
 <li>tailwindcss: "3.2.7"</li>
 <li>firebase: "9.17.1"</li>
-<li>react-router-dom: "^.8.1"</li>
+<li>react-router-dom: "6.8.1"</li>
 <li>daisyui: "2.50.2"</li>
 <li>react-hot-toast: "2.4.0"</li>
 </ul>
@@ -18,12 +18,12 @@ Bu projede kullanılan teknolojiler:
 <h2>1-Login Sayfası</h2>
 <div style="margin-bottom: 10px; border-bottom:1px solid white;">
 
-<div style="display:flex; ">
+<div style="display:flex; flex-wrap:wrap">
 <img style="width: 516px" src="public/screenshots/1-login_page_computer.png">
 <img style="height: 300px" src="public/screenshots/1-login_page_mobile.png">
 </div>
 
-<p>Asdaasdasd</p>
+<p style="margin-top: 10px">Bu bir login sayfasıdır.</p>
 </div>
 
 <h2>2-İlk Sayfa</h2>
